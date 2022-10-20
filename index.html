@@ -16,9 +16,10 @@
     </div>
     <a-scene
       vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true; precision: medium;"
+      renderer="logarithmicDepthBuffer: true;"
       embedded
       arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+      id="scene"
     >
       <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
       <a-nft
@@ -32,7 +33,8 @@
         <a-entity
           gltf-model="https://douglasgimli.github.io/assets/trex-example/scene.gltf"
           scale="5 5 5"
-          position="150 300 -100"
+          position="50 150 0"
+          gesture-handler="minScale: 0.25; maxScale: 10"
         >
         </a-entity>
       </a-nft>
